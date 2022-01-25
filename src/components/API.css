@@ -1,0 +1,8 @@
+.api-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  width: 200px;
+  height: 250px;
+}

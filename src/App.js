@@ -1,19 +1,16 @@
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import fetchData from './services/api';
-import { useEffect } from 'react';
+import APIList from './views/APIList';
 
 function App() {
-  const mod = 'entries';
-  useEffect(() => {
-    const fetchApi = async () => {
-      const data = await fetchData(mod);
-      console.log(data.entries);
-      return data;
-    };
-    fetchApi();
-  }, []);
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <h1>API of APIs</h1>
+      <BrowserRouter>
+        <APIList path="/" />
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
