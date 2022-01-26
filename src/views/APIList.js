@@ -45,8 +45,8 @@ export default function APIList() {
         ))}
       </select>
       <div className="card-box">
-        {api.map((ap) => (
-          <API key={ap.api} {...ap} />
+        {api.map((ap, i) => (
+          <API key={`${i}-${ap.API}`} {...ap} /> //In the future, add index as a value in the object, then use THAT as key.
         ))}
       </div>
     </>
