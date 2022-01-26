@@ -16,7 +16,6 @@ export default function APIList() {
     };
     fetchCat();
   }, []);
-  console.log(catList);
 
   useEffect(() => {
     const fetchApi = async () => {
