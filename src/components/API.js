@@ -4,7 +4,7 @@ import './API.css';
 export default function API(props) {
   return (
     <div className="api-card">
-      <div>Name of API: {props.API}</div>
+      <h4>Name of API: {props.API}</h4>
       <div>Auth: {props.Auth}</div>
       <div>Category: {props.Category}</div>
       <div>CORS: {props.Cors}</div>
