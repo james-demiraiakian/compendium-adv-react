@@ -15,7 +15,7 @@ export default function APIList() {
       setCatList(categories);
     };
     fetchCat();
-  }, []);
+  }, [catList]);
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -38,8 +38,8 @@ export default function APIList() {
     <>
       <select value={category} onChange={(e) => setCategory(e.target.value)}>
         <option value="All">All</option>
-        {catList.map((cat) => (
-          <option key={cat} value={cat}>
+        {catList.map((cat, i) => (
+          <option key={`${i}-${cat}`} value={cat}>
             {cat}
           </option>
         ))}
