@@ -15,7 +15,7 @@ export default function APIList() {
       setCatList(categories);
     };
     fetchCat();
-  }, [catList]);
+  }, []);
 
   useEffect(() => {
     const fetchApi = async () => {
